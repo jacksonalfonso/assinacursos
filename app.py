@@ -43,13 +43,13 @@ st.set_page_config(page_title="Controle Assinatura",
                 )
 
 with st.expander("Upload Planilha"):
+    st.write('SELECIONE A PLANILHA PARA VISUALIZAR')
     uploaded_file = st.file_uploader("Fazer Upload da planilha de controle", type='xlsx')
 
 #if  uploaded_file:
 dados = busca_dados(uploaded_file)
 #else:
 #    dados = pd.DataFrame()
-st.title('Controle Assinaturas :black_nib:  - SELECIONE UM ARQUIVO PARA VISUALIZAR')
 
 if len(dados) > 0:
     # filtros para a tabela
